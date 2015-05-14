@@ -27,6 +27,10 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
         sessionFactory.getCurrentSession().save(employee);
     }
     @Transactional
+    public void createEmployee(List<Employee> employee) {
+        for(Employee e:employee)sessionFactory.getCurrentSession().save(e);
+    }
+    @Transactional
     public Employee getEmployee(long id) {
         return (Employee)  sessionFactory.getCurrentSession().get(Employee.class,id);
     }

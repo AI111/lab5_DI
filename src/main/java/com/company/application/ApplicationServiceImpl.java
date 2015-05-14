@@ -38,8 +38,6 @@ public class ApplicationServiceImpl implements ApplicationService {
         boolean[] aded = new boolean[list.size()];
         boolean repeat=false;
         Arrays.fill(aded,false);
-        System.out.println(list);
-
         for (int i = 0; i < list.size() ; i++) {
             for (int j = 0; j < list.size(); j++) {
                 if(i!=j&&!aded[i]&&list.get(i).getName().equals(list.get(j).getName())){
@@ -48,7 +46,6 @@ public class ApplicationServiceImpl implements ApplicationService {
                     answer.add(list.get(j));
                     aded[j]=true;
 
-                    System.out.println(list.get(i).getId()+" = "+list.get(j).getId());
                 }
             }
             repeat =false;

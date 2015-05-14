@@ -10,4 +10,5 @@ import java.util.List;
 public interface ApplicationService {
     int concatUserName3();
     List<Employee> getAllEmployeesWithRepeatedNames();
+
 }
